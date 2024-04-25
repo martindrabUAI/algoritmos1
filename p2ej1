@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+
+int main(int argc, char** argv) {
+	
+		printf("Hello!\n");
+	
+	int numA, numB,banner=0;
+	
+	
+	
+	 do {
+		
+	
+	
+	printf("ingrese el primer numero \n");
+	scanf("%d",&numA);
+	
+	printf("ingrese el 2do numero a comparar \n");
+	scanf("%d",&numB);
+	
+	
+	if(numA > numB) {
+		printf("el primer numero es mayor \n");
+	} else {
+		printf("el 2do numero es mayor \n");
+	}
+	
+	printf("presione 1 para salir o cualquier tecla para repetir \n");
+	
+	scanf("%d", &banner);
+	
+	
+	}while((banner==0)||(banner!=1));
+	
+	printf("Chau!\n");
+	
+	return 0;
+}
