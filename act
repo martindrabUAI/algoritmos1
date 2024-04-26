@@ -22,6 +22,7 @@ int main() {
 	float altura;
 	float alturamediamujer;
 	float alturamediavaron;
+	int dia;
 	char sexo[MAX_STRLEN];
 	alturamediamujer = 1.65;
 	alturamediavaron = 1.75;
@@ -44,5 +45,22 @@ int main() {
 			printf("Su altura es menor que la media\n");
 		}
 	}
+	printf("Ingrese el numero del dia del 1 al 7\n");
+	scanf("%i",&dia);
+	switch (dia) {
+	case 1:
+		printf("Lunes\n");
+		break;
+	case 2:
+		printf("Martes\n");
+		break;
+	case 3:
+		printf("MIercoles\n");
+		break;
+	default:
+		printf("No existe\n");
+	}
 	return 0;
 }
+
+
