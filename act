@@ -1,0 +1,48 @@
+/* Este codigo ha sido generado por el modulo psexport 20180802-w32 de PSeInt.
+Es posible que el codigo generado no sea completamente correcto. Si encuentra
+errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
+
+#include<stdio.h>
+#include<string.h>
+
+/* En C no hay variables para guardar cadenas de texto, sino que debe construirse
+   un arreglo de caracteres (tipo char). El tamaño del arreglo determina la longitud
+   máxima que puede tener la cadena que guarda (tamaño-1, por el caracter de terminación).
+   La constante MAX_STRLEN define el tamaño máximo que se utiliza en este programa para
+   cualquier cadena. */
+#define MAX_STRLEN 256
+
+/* Para leer variables de texto se utiliza scanf, que lee solo una palabra. 
+   Para leer una linea completa (es decir, incluyendo los espacios en blanco)
+   se debe utilzar ges (ej, reemplazar scanf("%s",x) por gets(x)) pero 
+   obliga a agregar un getchar() antes del gets si antes del mismo se leyó
+   otra variable con scanf. */
+
+int main() {
+	float altura;
+	float alturamediamujer;
+	float alturamediavaron;
+	char sexo[MAX_STRLEN];
+	alturamediamujer = 1.65;
+	alturamediavaron = 1.75;
+	printf("%s\n",("ingrese su sexo M o F"));
+	scanf("%s",sexo);
+	printf("%s\n",("ingrese su altura"));
+	scanf("%f",&altura);
+	if (((strcmp(sexo,"m")==0) || (strcmp(sexo,"M")==0))) {
+		printf("%s\n",("Es varon"));
+		if (altura>=alturamediavaron) {
+			printf("Su altura es mayor que la media\n");
+		} else {
+			printf("Su altura es menor que la media\n");
+		}
+	} else {
+		printf("%s\n",("Es mujer"));
+		if (altura>=alturamediamujer) {
+			printf("Su altura es mayor que la media\n");
+		} else {
+			printf("Su altura es menor que la media\n");
+		}
+	}
+	return 0;
+}
